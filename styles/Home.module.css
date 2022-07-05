@@ -3,13 +3,11 @@
 }
 
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 .footer {
@@ -17,7 +15,7 @@
   flex: 1;
   padding: 2rem 0;
   border-top: 1px solid #eaeaea;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -56,6 +54,12 @@
   font-size: 1.5rem;
 }
 
+.lightText {
+  font-size: .8rem;
+  font-weight: 200;
+  color: #7a7a7a;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
@@ -79,28 +83,24 @@
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid #cfcbcb;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  cursor: inherit;
+  position: relative;
+  max-width: 25rem;
 }
 
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  text-align: center;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.songLink {
+  cursor: pointer;
+  width: 27rem;
+  min-width: 27rem;
 }
 
 .logo {
@@ -113,4 +113,373 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+.brandColor_Primary {
+  color: #25d39d;
+}
+
+.brandColor_PrimaryDark {
+  color: #009990;
+}
+
+.brandColor_Secondary {
+  color: #8a02b3;
+}
+
+.center {
+  text-align: center;
+}
+
+.inputFields input[type="text"],
+.inputFields input[type="password"],
+.inputFields input[type="email"] {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid #cfcbcb;
+  border-bottom: none;
+  padding: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.inputFields input:only-child {
+  border-radius: 10px !important;
+}
+
+.inputFields input:first-child {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.inputFields input:last-child {
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 1px solid #cfcbcb;
+}
+
+.lyricsParent {
+  margin-top: 40px;
+}
+
+.lyricsParent textarea {
+  width: 100%;
+  margin: 0px;
+  border: 1px solid #cfcbcb;
+  padding: 0.75rem;
+  font-size: 1.05rem;
+  border-radius: 10px !important;
+  height: 300px;
+}
+
+
+.header {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  position: sticky;
+  width: 100%;
+  background-color: rgb(72, 72, 72);
+  color: #fff;
+  top: 0;
+  z-index: 2;
+}
+
+.headerDiv {
+  display: flex;
+  justify-content: space-between;
+  line-break: strict;
+  font-size: 16px !important;
+  line-height: 20px !important;
+  box-sizing: border-box;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.headerInput {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: .95rem;
+  display: inline-flex;
+}
+
+.headerSearchBox {
+  background-color: white;
+}
+
+.headerInput input {
+  width: 100%;
+  margin: 0.75rem 0px;
+  font-size: 1.05rem;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  border-right: 1px solid #cfcbcb;
+}
+
+.headerInput input:last-of-type {
+  border-right: none;
+}
+
+.headerInput input:focus,
+.headerInput input:focus-visible {
+  outline: none;
+}
+
+.searchButton {
+  background-color: #8a02b3;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 7px 7px 7px 0;
+  cursor: pointer;
+}
+
+.searchButton svg {
+  display: block;
+  fill: none;
+  height: 12px;
+  width: 12px;
+  stroke: currentcolor;
+  stroke-width: 5.33333;
+  overflow: visible;
+}
+
+.headerButton {
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.headerButton:hover {
+  box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+}
+
+.headerDropDownContainer {
+  box-sizing: border-box;
+  position: absolute;
+  top: 40px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  margin-top: 34px;
+  padding: 8px 0;
+  right: 0;
+  color: rgb(72, 72, 72);
+  background-color: #fff;
+}
+
+.headerDropDown div {
+  padding: 0px 15px;
+  line-height: 2.25rem;
+  font-size: .95rem;
+  cursor: pointer
+}
+
+.headerDropDown div:first-child {
+  font-weight: bold;
+}
+
+.headerDropDown div:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.subHeader {
+  background-image: radial-gradient(circle, #24d39d, #24d39d, #1eb5ac);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subHeaderButton {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  font-weight: bold;
+  font-size: .85rem;
+  cursor: pointer;
+}
+
+.subHeaderButton svg {
+  display: block;
+  height: 1.4rem;
+  width: 1.4rem;
+  stroke: currentcolor;
+  stroke-width: 15;
+  overflow: visible;
+}
+
+.modal {
+  position: fixed;
+  inset: 0 0 auto;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  color: rgb(72, 72, 72);
+  -webkit-font-smoothing: antialiased;
+  width: 568px;
+  max-height: 480px;
+  margin: 40px auto;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(0 0 0 / 28%) 0px 8px 28px;
+  overflow-y: scroll;
+  --scrollbar-gutter: 0px;
+  z-index: 10;
+}
+
+.modalBackdrop {
+  background: rgb(34 34 34 / 50%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 10;
+}
+
+.modalExit {
+  position: absolute;
+  display: flex;
+  top: 24px;
+  left: 24px;
+}
+
+.modalExit button {
+  border: none;
+  background-color: transparent;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.modalExit svg {
+  display: block;
+  fill: none;
+  height: 16px;
+  width: 16px;
+  stroke: currentcolor;
+  stroke-width: 3;
+  overflow: visible;
+}
+
+.modalHeader {
+  min-height: 64px;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.modalBody {
+  padding: 40px;
+  padding-top: 10px;
+}
+
+.modalBody p {
+  text-align: center;
+}
+
+.primaryButton {
+  border: none;
+  background-color: #25d39d;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.25rem;
+}
+
+.primaryButton:hover,
+.primaryButton:active {
+  background-color: #8a02b3;
+}
+
+.primaryButton:focus-visible {
+  background-color: #009990;
+  outline:none;
+}
+
+.errorMessage {
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+  display: flex;
+}
+
+.errorIcon {
+  background-color: #fc8071;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.errorMessage svg {
+  height: 24px;
+  width: 24px;
+  display: block;
+  fill: rgb(255, 255, 255);
+}
+
+.errorText {
+  padding: .75rem;
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.compact .songDetails {
+  max-height: 16.5rem;
+  overflow: hidden;
+}
+
+.songInfo div {
+  font-size: .9em;
+  color:#484848;
+}
+
+.lyricsDiv {
+  white-space: pre-wrap;
+  margin-top: 1rem;
+}
+
+.cardEdit {
+  position: absolute;
+  display: flex;
+  top: 24px;
+  right: 24px;
+  color: #009990;
+  cursor: pointer;
+}
+
+.cardEdit:hover {
+  color: #8a02b3;
+}
+
+.cardEdit svg {
+  display: block;
+  height: 1.4rem;
+  width: 1.4rem;
+  stroke: currentcolor;
+  stroke-width: 8px;
+  overflow: visible;
+  fill: none;
 }

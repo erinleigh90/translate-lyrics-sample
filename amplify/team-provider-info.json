@@ -10,6 +10,11 @@
       "StackName": "amplify-translatelyricssampl-dev-144508",
       "StackId": "arn:aws:cloudformation:us-east-1:684949090929:stack/amplify-translatelyricssampl-dev-144508/beb0aea0-fcab-11ec-84db-0ac1caf54b43",
       "AmplifyAppId": "d3tsoo0vry9xck"
+    },
+    "categories": {
+      "auth": {
+        "translatelyricssampl7724b533": {}
+      }
     }
   }
 }

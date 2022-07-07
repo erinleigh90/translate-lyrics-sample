@@ -29,7 +29,15 @@
     "TranslateLyricsSampleAPI": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "translatelyricssampl7724b533",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
       "output": {
         "authConfig": {
           "defaultAuthentication": {
@@ -40,7 +48,14 @@
               "description": "TranslateLyricsSampleAPIKey"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authtranslatelyricssampl7724b533"
+              }
+            }
+          ]
         }
       }
     }
